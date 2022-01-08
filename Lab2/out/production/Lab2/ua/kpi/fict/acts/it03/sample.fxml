@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #1F2023;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ua.kpi.fict.acts.it03.Controller">
+   <children>
+      <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="500.0" prefWidth="1000.0" style="-fx-background-color: #27292D;">
+         <children>
+            <TableView fx:id="indexTable" layoutX="7.0" layoutY="49.0" prefHeight="451.0" prefWidth="243.0">
+              <columns>
+                 <TableColumn prefWidth="175.0" text="Key">
+                    <cellValueFactory>
+                       <PropertyValueFactory property="key"/>
+                    </cellValueFactory>
+                 </TableColumn>
+
+                <TableColumn prefWidth="68.0" text="Block">
+                    <cellValueFactory>
+                       <PropertyValueFactory property="value"/>
+                    </cellValueFactory>
+                 </TableColumn>
+              </columns>
+            </TableView>
+            <TableView fx:id="dataTable" layoutX="260.0" layoutY="49.0" prefHeight="451.0" prefWidth="735.0">
+              <columns>
+                <TableColumn prefWidth="175.0" text="Key">
+                 <cellValueFactory>
+                    <PropertyValueFactory property="key"/>
+                 </cellValueFactory>
+              </TableColumn>
+                <TableColumn prefWidth="560.0" text="Value" >
+                 <cellValueFactory>
+                    <PropertyValueFactory property="value"/>
+                 </cellValueFactory>
+              </TableColumn>
+              </columns>
+            </TableView>
+            <Label layoutX="48.0" layoutY="7.0" prefHeight="42.0" prefWidth="155.0" text="Index File" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS" size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="561.0" layoutY="7.0" prefHeight="42.0" prefWidth="138.0" text="Data File" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TextField fx:id="keyForm" layoutX="160.0" layoutY="508.0" prefHeight="25.0" prefWidth="243.0" promptText="Key" />
+      <TextArea fx:id="valueForm" layoutX="160.0" layoutY="541.0" prefHeight="53.0" prefWidth="243.0" promptText="Value" />
+      <Button fx:id="setButton" layoutX="412.0" layoutY="541.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="138.0" text="SET">
+         <font>
+            <Font name="Comic Sans MS" size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="getButton" layoutX="558.0" layoutY="541.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="138.0" text="GET">
+         <font>
+            <Font name="Comic Sans MS" size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="delButton" layoutX="703.0" layoutY="541.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="138.0" text="DEL">
+         <font>
+            <Font name="Comic Sans MS" size="21.0" />
+         </font>
+      </Button>
+      <Label fx:id="infoLabel" layoutX="412.0" layoutY="506.0" prefHeight="31.0" prefWidth="428.0" textFill="RED">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
